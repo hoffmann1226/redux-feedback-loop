@@ -8,6 +8,8 @@ import Feelings from './../Feelings/Feelings'
 import Understanding from './../Understanding/Understanding'
 import Support from './../Support/Support'
 import Comments from './../Comments/Comments'
+import Review from './../Review/Review'
+
 
 
 class App extends Component {
@@ -25,7 +27,7 @@ render() {
         <Route exact path="/Understanding" component={Understanding}/>
         <Route exact path="/Support" component={Support}/>
         <Route exact path="/Comments" component={Comments}/>
-        {/* <Route exact path="/Review" component={Review}/> */}
+        <Route exact path="/Review" component={Review}/>
         {/* <Route exact path="/Final" component={Final}/> */}
   
       </div>

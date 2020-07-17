@@ -27,6 +27,12 @@ const setFeeling = (state = [], action) => {
     return state;
   }
 
+  const setComments = (state = [], action) => {
+    if (action.type==='SET_COMMENTS'){
+      return  [action.payload];
+    }
+    return state;
+  }
 
 
   
@@ -36,7 +42,7 @@ const storeInstance = createStore(
       setFeeling,
       setUnderstanding,
       setSupport,
-    //   setComments,
+      setComments,
     //   submittedData,
     }),
     applyMiddleware(logger)
