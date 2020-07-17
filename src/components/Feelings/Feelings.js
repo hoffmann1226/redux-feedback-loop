@@ -21,7 +21,7 @@ changeType = (event) => {
     this.props.dispatch({type: 'SET_FEELING', payload: this.state.feeling})
     this.goNext();
   }
-goNext =() => this.props.history.push('/understanding')
+goNext =() => this.props.history.push('/Understanding')
 
   render() {
     return (

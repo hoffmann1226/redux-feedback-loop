@@ -13,6 +13,19 @@ const setFeeling = (state = [], action) => {
     return state;
   }
 
+  const setUnderstanding = (state = [], action) => {
+    if (action.type==='SET_UNDERSTANDING'){
+      return  [action.payload];
+    }
+    return state;
+  }
+
+  const setSupport = (state = [], action) => {
+    if (action.type==='SET_SUPPORT'){
+      return  [action.payload];
+    }
+    return state;
+  }
 
 
 
@@ -21,8 +34,8 @@ const setFeeling = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
       setFeeling,
-    //   setUnderstanding,
-    //   setSupport,
+      setUnderstanding,
+      setSupport,
     //   setComments,
     //   submittedData,
     }),

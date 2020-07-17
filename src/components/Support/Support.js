@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
-class Feelings extends Component {
+class Support extends Component {
 
 state = {
-  understanding: '',
+  support: '',
 }
 
 changeType = (event) => {
   console.log("in ChangeType")
     this.setState({
-        understanding: event.target.value,
+        support: event.target.value,
     })
   }
 
   
   submitInput = (event) => {
     event.preventDefault();
-    console.log(this.state.understanding)
-    this.props.dispatch({type: 'SET_UNDERSTANDING', payload: this.state.understanding})
+    console.log(this.state.support)
+    this.props.dispatch({type: 'SET_SUPPORT', payload: this.state.support})
     this.goNext();
   }
-goNext =() => this.props.history.push('/Support')
+goNext =() => this.props.history.push('/Comments')
 
   render() {
     return (
       
       <div>
-        <p>Question 2 of 4</p>
-        <h1>How well are you understanding the content?</h1>
+        <p>Question 3 of 4</p>
+        <h1>How well are you being supported?</h1>
         <select onChange={this.changeType}>
           <option value="1">1</option>
           <option value="2">2</option> 
@@ -51,4 +51,4 @@ const mapReduxStateToProps=(reduxState)=>{
   return reduxState;
 }
 
-export default connect(mapReduxStateToProps)(Feelings);
+export default connect(mapReduxStateToProps)(Support);
