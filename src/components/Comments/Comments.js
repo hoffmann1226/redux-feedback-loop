@@ -17,9 +17,13 @@ changeType = (event) => {
   
   submitInput = (event) => {
     event.preventDefault();
-    console.log(this.state.understanding)
+    console.log(this.state.comments)
+    if (this.state.comments === ''){
+      alert('You must leave a comment!')   
+     } else {
     this.props.dispatch({type: 'SET_COMMENTS', payload: this.state.comments})
     this.goNext();
+     }
   }
 goNext =() => this.props.history.push('/Review')
 
