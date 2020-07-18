@@ -13,16 +13,23 @@ class Review extends Component {
 
   submitInput = (event) => {
     console.log(this.state)
-    this.handleSubmit(event);
+    this.handleSubmit(this.state);
     this.goNext();
   }
 
-  handleSubmit = ((event) => {
-    axios.post('/submit', this.state)
-      .then(response => {
-        console.log(response)
+  handleSubmit = (feedback) => {
+    axios({
+        method: 'POST',
+        url: '/submit',
+        data: feedback
       })
-  })
+        .then((response)=>{
+         console.log(response)
+        })
+        .catch( (error) => {
+          console.log( 'error adding feedback', error)
+        })
+  }
   goNext = () => this.props.history.push('/final')
 
 
