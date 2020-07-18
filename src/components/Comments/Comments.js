@@ -27,7 +27,7 @@ goNext =() => this.props.history.push('/Review')
     return (
       
       <div>
-        <p>Question 2 of 4</p>
+        <p>Question 4 of 4</p>
         <h1>Any comments you want to leave?</h1>
         <input onChange={this.changeType}></input>
          
