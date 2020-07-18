@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+//require submitRouter from routes (see submit.router.js for the call)
 const submitRouter = require('./routes/submit.router.js');
 const PORT = process.env.PORT || 5000;
 

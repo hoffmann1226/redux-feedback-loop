@@ -1,3 +1,5 @@
+//same comments and logic as in feeling.js 
+
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 

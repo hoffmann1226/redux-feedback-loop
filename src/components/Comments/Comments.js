@@ -1,3 +1,4 @@
+//same comments and logic as in feeling.js 
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
@@ -26,6 +27,7 @@ changeType = (event) => {
      }
   }
 goNext =() => this.props.history.push('/Review')
+goBack =() => this.props.history.push('/Support')
 
   render() {
     return (
@@ -36,6 +38,7 @@ goNext =() => this.props.history.push('/Review')
         <input onChange={this.changeType}></input>
          
       <footer>
+      <button onClick={this.goBack}>Back</button>
       <button onClick={this.submitInput}>Next</button>
       
       </footer>

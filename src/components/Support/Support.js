@@ -1,3 +1,5 @@
+//same comments and logic as in feeling.js 
+
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 
@@ -26,6 +28,7 @@ changeType = (event) => {
      }
   }
 goNext =() => this.props.history.push('/Comments')
+goBack =() => this.props.history.push('/Understanding')
 
   render() {
     return (
@@ -43,6 +46,7 @@ goNext =() => this.props.history.push('/Comments')
         
       
       <footer>
+      <button onClick={this.goBack}>Back</button>
       <button onClick={this.submitInput}>Next</button>
       
       </footer>

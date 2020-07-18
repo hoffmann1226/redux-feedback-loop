@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import {connect} from 'react-redux';
+//import router to create routes between pages
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 //import all the other components
@@ -24,7 +25,7 @@ render() {
         <h4><i>Don't forget it!</i></h4>
       </header>
       <br/>
-        
+        {/* routes created */}
         <Route exact path="/" component={Feelings}/>
         <Route exact path="/Understanding" component={Understanding}/>
         <Route exact path="/Support" component={Support}/>
@@ -38,6 +39,7 @@ render() {
 }
 }
 
+//redux used
 const putReduxStateOnProps = (reduxState) => ({
   reduxState
 })

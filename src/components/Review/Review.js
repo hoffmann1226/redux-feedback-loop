@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 class Review extends Component {
 
+    //use redux reducers to bring in data and assign it in local state
   state = {
     feeling: this.props.setFeeling[0],
     understanding: this.props.setUnderstanding[0],
@@ -17,6 +18,7 @@ class Review extends Component {
     this.goNext();
   }
 
+//once data is gathered, send it to the server then to the database (see server.js to track axios path)
   handleSubmit = (feedback) => {
     axios({
         method: 'POST',
@@ -31,6 +33,7 @@ class Review extends Component {
         })
   }
   goNext = () => this.props.history.push('/final')
+  goBack =() => this.props.history.push('/Comments')
 
 
   render() {
@@ -43,6 +46,7 @@ class Review extends Component {
         <h1>Support: {this.props.setSupport}</h1>
         <h1>Comments: {this.props.setComments}</h1>
         <footer>
+          <button onClick={this.goBack}>Back</button>
           <button onClick={this.submitInput}>Submit</button>
         </footer>
       </div>

@@ -1,3 +1,4 @@
+//import all the necessary things
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,6 +7,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'; 
 import logger from 'redux-logger';
 
+//create reducers for Feeling, Understanding, Support, and Comments
 const setFeeling = (state = [], action) => {
     if (action.type==='SET_FEELING'){
       return  [action.payload];
@@ -36,17 +38,16 @@ const setFeeling = (state = [], action) => {
 
 
   
-  
+//store instance and combine reducers
 const storeInstance = createStore(
     combineReducers({
       setFeeling,
       setUnderstanding,
       setSupport,
       setComments,
-    //   submittedData,
     }),
     applyMiddleware(logger)
   );
 
-
+//necessary language to store for use in redux
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
