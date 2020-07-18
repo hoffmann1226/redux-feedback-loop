@@ -18,8 +18,12 @@ changeType = (event) => {
   submitInput = (event) => {
     event.preventDefault();
     console.log(this.state.understanding)
+    if (this.state.understanding === ''){
+      alert('You must choose an answer!')   
+     } else {
     this.props.dispatch({type: 'SET_UNDERSTANDING', payload: this.state.understanding})
     this.goNext();
+     }
   }
 goNext =() => this.props.history.push('/Support')
 

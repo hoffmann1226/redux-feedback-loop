@@ -18,8 +18,12 @@ changeType = (event) => {
   submitInput = (event) => {
     event.preventDefault();
     console.log(this.state.support)
+    if (this.state.support === ''){
+      alert('You must choose an answer!')   
+     } else {
     this.props.dispatch({type: 'SET_SUPPORT', payload: this.state.support})
     this.goNext();
+     }
   }
 goNext =() => this.props.history.push('/Comments')
 
