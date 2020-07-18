@@ -8,7 +8,7 @@ state = {
 }
 
 changeState = (event) => {
-  console.log("in ChangeType")
+  console.log("in changeState")
     this.setState({
         feeling: event.target.value,
     })
@@ -27,6 +27,7 @@ changeState = (event) => {
 }
 
 goNext =() => this.props.history.push('/Understanding')
+
 
   render() {
     return (

@@ -8,7 +8,7 @@ state = {
 }
 
 changeState = (event) => {
-  console.log("in ChangeType")
+  console.log("in changeState")
     this.setState({
         understanding: event.target.value,
     })
@@ -26,6 +26,7 @@ changeState = (event) => {
      }
   }
 goNext =() => this.props.history.push('/Support')
+goBack =() => this.props.history.push('/')
 
   render() {
     return (
@@ -43,8 +44,8 @@ goNext =() => this.props.history.push('/Support')
         
       
       <footer>
+      <button onClick={this.goBack}>Back</button>
       <button onClick={this.submitInput}>Next</button>
-      
       </footer>
       </div>
     );

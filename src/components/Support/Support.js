@@ -8,7 +8,7 @@ state = {
 }
 
 changeType = (event) => {
-  console.log("in ChangeType")
+  console.log("in changeState")
     this.setState({
         support: event.target.value,
     })
