@@ -7,7 +7,7 @@ state = {
   feeling: '',
 }
 
-changeType = (event) => {
+changeState = (event) => {
   console.log("in ChangeType")
     this.setState({
         feeling: event.target.value,
@@ -34,7 +34,7 @@ goNext =() => this.props.history.push('/Understanding')
       <div>
         <p>Question 1 of 4</p>
         <h1>How are you feeling today?</h1>
-        <select onChange={this.changeType}>
+        <select onChange={this.changeState}>
           <option value="1">1</option>
           <option value="2">2</option> 
           <option value="3">3</option> 
