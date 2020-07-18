@@ -17,10 +17,15 @@ changeType = (event) => {
   
   submitInput = (event) => {
     event.preventDefault();
+    if (this.state.feeling === ''){
+     alert('You must choose an answer!')   
+    } else {
     console.log(this.state.feeling)
     this.props.dispatch({type: 'SET_FEELING', payload: this.state.feeling})
     this.goNext();
   }
+}
+
 goNext =() => this.props.history.push('/Understanding')
 
   render() {
