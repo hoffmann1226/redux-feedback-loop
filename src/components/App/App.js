@@ -4,6 +4,7 @@ import './App.css';
 import {connect} from 'react-redux';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
+//import all the other components
 import Feelings from './../Feelings/Feelings'
 import Understanding from './../Understanding/Understanding'
 import Support from './../Support/Support'

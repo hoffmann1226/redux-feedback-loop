@@ -22,8 +22,8 @@ goNext =() => this.props.history.push('/')
   }
 }
 
-const mapReduxStateToProps=(reduxState)=>{
+const putReduxStateOnProps=(reduxState)=>{
   return reduxState;
 }
 
-export default connect(mapReduxStateToProps)(Final);
+export default connect(putReduxStateOnProps)(Final);

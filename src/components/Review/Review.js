@@ -51,8 +51,8 @@ class Review extends Component {
   }
 }
 
-const mapReduxStateToProps = (reduxState) => {
+const putReduxStateOnProps = (reduxState) => {
   return reduxState;
 }
 
-export default connect(mapReduxStateToProps)(Review);
+export default connect(putReduxStateOnProps)(Review);

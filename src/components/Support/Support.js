@@ -47,8 +47,8 @@ goNext =() => this.props.history.push('/Comments')
   }
 }
 
-const mapReduxStateToProps=(reduxState)=>{
+const putReduxStateOnProps=(reduxState)=>{
   return reduxState;
 }
 
-export default connect(mapReduxStateToProps)(Support);
+export default connect(putReduxStateOnProps)(Support);

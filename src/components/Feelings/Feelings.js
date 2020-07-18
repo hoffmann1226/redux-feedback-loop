@@ -47,8 +47,8 @@ goNext =() => this.props.history.push('/Understanding')
   }
 }
 
-const mapReduxStateToProps=(reduxState)=>{
+const putReduxStateOnProps=(reduxState)=>{
   return reduxState;
 }
 
-export default connect(mapReduxStateToProps)(Feelings);
+export default connect(putReduxStateOnProps)(Feelings);
