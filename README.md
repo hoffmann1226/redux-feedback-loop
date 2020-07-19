@@ -65,4 +65,4 @@ How does someone use this application? Tell a user story here.
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank you to Mary Mosman and Dev Jana for their counsel.)
 
 ## Support
-If you have suggestions or issues, please email me at [hoffmann1226.com]
+If you have suggestions or issues, please email me at [hoffmann1226@gmail.com]
